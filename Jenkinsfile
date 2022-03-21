@@ -11,6 +11,7 @@ pipeline {
           jq --version
         '''
       }
+    }  
     stage('Start container') {
       steps {
         sh 'docker compose up'
