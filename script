@@ -1,0 +1,8 @@
+
+#!/bin/bash
+
+if docker stop $(docker ps -aq)&> /dev/null; then
+   docker rm $(docker ps -aq)
+   echo "CONTAINERS REMOVED"
+else echo "NO CONTAINERS"
+fi
