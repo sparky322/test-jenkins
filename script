@@ -27,8 +27,6 @@ else echo "NO CONTAINERS"
 fi
 
 
-
-
 #remove git directory
 if cd ./test-jenkins &> /dev/null; then
    cd ..
@@ -36,5 +34,8 @@ if cd ./test-jenkins &> /dev/null; then
    echo "GIT DIRECTORY REMOVED"
 else echo "NO GIT DIRECTORY"
 fi
+
+git clone https://github.com/sparky322/test-jenkins.git
+cd ./test-jenkins/ && docker-compose up -d
 
 
