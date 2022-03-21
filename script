@@ -35,7 +35,6 @@ if cd ./test-jenkins &> /dev/null; then
 else echo "NO GIT DIRECTORY"
 fi
 
-git clone https://github.com/sparky322/test-jenkins.git
 cd ./test-jenkins/ && docker-compose up -d
 
 
