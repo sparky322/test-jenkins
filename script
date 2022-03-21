@@ -9,8 +9,9 @@ else echo "NO CONTAINERS"
 fi
 
 #remove git directory
-if cd ./test-jenkins&> /dev/null; then
-   docker rm -rf test-jenkins/
+if cd ./test-jenkins &> /dev/null; then
+   cd ..
+   rm -rf test-jenkins/
    echo "GIT DIRECTORY REMOVED"
 else echo "NO GIT DIRECTORY"
 fi
