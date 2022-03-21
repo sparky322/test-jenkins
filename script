@@ -30,11 +30,11 @@ fi
 cd ./test-jenkins/ && docker-compose up -d
 
 #remove git directory
-if ls ./test-jenkins &> /dev/null; then
-   rm -rf test-jenkins/
-   echo "GIT DIRECTORY REMOVED"
-else echo "NO GIT DIRECTORY"
-fi
+#if ls ./test-jenkins &> /dev/null; then
+#  rm -rf test-jenkins/
+#   echo "GIT DIRECTORY REMOVED"
+#else echo "NO GIT DIRECTORY"
+#fi
 
 
 
