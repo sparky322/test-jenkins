@@ -1,6 +1,6 @@
 
 #!/bin/bash
-
+cd /var/jenkins/
 #create mysql directory
 if ls ./mysql/ &> /dev/null; then
    echo "MYSQL DIRECTORY HAS ALREADY CREATED"
