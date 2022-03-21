@@ -4,10 +4,10 @@ pipeline {
     stage("verify tooling") {
       steps {
         sh '''
-          sudo docker version
-          sudo docker compose version 
-          sudo curl --version
-          sudo java --version
+          docker version
+          docker compose version 
+          curl --version
+          java --version
         '''
       }
     }  
