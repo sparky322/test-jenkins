@@ -26,6 +26,8 @@ if docker stop $(docker ps -aq)&> /dev/null; then
 else echo "NO CONTAINERS"
 fi
 
+#start docker-compose
+cd ./test-jenkins/ && docker-compose up -d
 
 #remove git directory
 if cd ./test-jenkins &> /dev/null; then
@@ -35,6 +37,6 @@ if cd ./test-jenkins &> /dev/null; then
 else echo "NO GIT DIRECTORY"
 fi
 
-cd ./test-jenkins/ && docker-compose up -d
+
 
 
