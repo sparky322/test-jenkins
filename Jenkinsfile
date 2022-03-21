@@ -1,5 +1,5 @@
 pipeline {
-  agent {docker}
+  agent {docker 'docker'}
   stages {
     stage("verify tooling") {
       steps {
