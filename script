@@ -1,12 +1,33 @@
 
 #!/bin/bash
 
+#create mysql directory
+if ls ./mysql/ &> /dev/null; then
+   echo "MYSQL DIRECTORY HAS ALREADY CREATED"
+else mkdir mysql
+   echo "MYSQL DIRECTORY HAS BEEN CREATED"
+fi
+
+#download wordpress and make directory
+if ls ./wordpress/ &> /dev/null; then
+   echo "WORDPRESS HAS ALREADY DOWNLOADED"
+else wget https://wordpress.org/latest.tar.gz
+     tar -xvzf latest.tar.gz
+     rm ./latest.tar.*
+     echo "WORDPRESS HAS BEEN DOWNLOADED"
+fi
+
+
+
 #revome old containers
 if docker stop $(docker ps -aq)&> /dev/null; then
    docker rm $(docker ps -aq)
    echo "CONTAINERS REMOVED"
 else echo "NO CONTAINERS"
 fi
+
+
+
 
 #remove git directory
 if cd ./test-jenkins &> /dev/null; then
@@ -15,3 +36,5 @@ if cd ./test-jenkins &> /dev/null; then
    echo "GIT DIRECTORY REMOVED"
 else echo "NO GIT DIRECTORY"
 fi
+
+
