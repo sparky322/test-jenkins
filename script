@@ -29,7 +29,7 @@ else echo "NO CONTAINERS"
 fi
 
 #start docker-compose
-#cd ./test-jenkins/ && docker-compose up -d
+docker-compose up -d
 
 
 
