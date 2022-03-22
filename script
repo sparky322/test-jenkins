@@ -8,18 +8,12 @@ else mkdir mysql
    echo "MYSQL DIRECTORY HAS BEEN CREATED"
 fi
 
-#download wordpress and make directory
+#check wordpress directory
 if ls ./wordpress/ &> /dev/null; then
-   echo "WORDPRESS HAS ALREADY DOWNLOADED"
+   echo "WORDPRESS HAS ALREADY CREATED"
 else mkdir ./wordpress
       echo "WORDPRESS CATALOG HAS BEEN CREATED"
-#     wget https://wordpress.org/latest.tar.gz
-#     tar -xvzf latest.tar.gz
-#     rm ./latest.tar.*
-#     echo "WORDPRESS HAS BEEN DOWNLOADED"
-fi
-
-
+      fi
 
 #revome old containers
 if docker stop $(docker ps -aq)&> /dev/null; then
