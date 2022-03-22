@@ -11,10 +11,12 @@ fi
 #download wordpress and make directory
 if ls ./wordpress/ &> /dev/null; then
    echo "WORDPRESS HAS ALREADY DOWNLOADED"
-else wget https://wordpress.org/latest.tar.gz
-     tar -xvzf latest.tar.gz
-     rm ./latest.tar.*
-     echo "WORDPRESS HAS BEEN DOWNLOADED"
+else mkdir ./wordpress
+      echo "WORDPRESS CATALOG HAS BEEN CREATED"
+#     wget https://wordpress.org/latest.tar.gz
+#     tar -xvzf latest.tar.gz
+#     rm ./latest.tar.*
+#     echo "WORDPRESS HAS BEEN DOWNLOADED"
 fi
 
 
