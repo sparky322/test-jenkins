@@ -23,14 +23,14 @@ else echo "NO CONTAINERS"
 fi
 
 #create env file 
-if cat ./.env &> /dev/null; then
-   echo "ENV FILE ALREADY EXIST. OLD PARAMETRS WILL USE "
-else echo $DATABASE_USER > .env
-   echo $DATABASE_PASSWORD >> .env
-   echo $DATABASE_NAME >> .env
-   echo "end" >> .env
-   echo "ENV FILE HAS CREATED"
-fi
+#if cat ./.env &> /dev/null; then
+#   echo "ENV FILE ALREADY EXIST. OLD PARAMETRS WILL USE "
+#else echo $DATABASE_USER > .env
+#   echo $DATABASE_PASSWORD >> .env
+#  echo $DATABASE_NAME >> .env
+#   echo "end" >> .env
+#  echo "ENV FILE HAS CREATED"
+#fi
 
 
 #start docker-compose
