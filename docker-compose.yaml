@@ -7,9 +7,9 @@ services:
             - 80:80
         environment: 
             WORDPRESS_DB_HOST: mariadb
-            WORDPRESS_DB_USER: ${DATABASE_USER}
-            WORDPRESS_DB_PASSWORD: ${DATABASE_PASSWORD}
-            WORDPRESS_DB_NAME: ${DATABASE_NAME}
+            WORDPRESS_DB_USER: "${DATABASE_USER}"
+            WORDPRESS_DB_PASSWORD: "${DATABASE_PASSWORD}"
+            WORDPRESS_DB_NAME: "${DATABASE_NAME}"
         volumes:
             - wordpress:/var/www/html
         links:
@@ -24,9 +24,9 @@ services:
             TZ: "Europe/Minsk"
             MYSQL_ALLOW_EMPTY_PASSWORD: "no"
             MYSQL_ROOT_PASSWORD: "rootpwd"
-            MYSQL_USER: ${DATABASE_USER}
-            MYSQL_PASSWORD: ${DATABASE_PASSWORD}
-            MYSQL_DATABASE: ${DATABASE_NAME}
+            MYSQL_USER: "${DATABASE_USER}"
+            MYSQL_PASSWORD: "${DATABASE_PASSWORD}"
+            MYSQL_DATABASE: "${DATABASE_NAME}"
 
 volumes:
     mariadb:
