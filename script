@@ -24,7 +24,7 @@ fi
 
 #create env file 
 #if cat ./.env &> /dev/null; then
-#   echo "ENV FILE ALREADY EXIST. WILL USE OLD PASSWORD"
+#   echo "ENV FILE ALREADY EXIST. OLD PARAMETRS WILL USE "
 #else echo $DATABASE_USER > .env
 #     echo $DATABASE_PASSWORD >> .env
 #     echo $DATABASE_NAME >> .env
