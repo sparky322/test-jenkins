@@ -28,6 +28,7 @@ if cat ./.env &> /dev/null; then
 else echo $DATABASE_USER > .env
    echo $DATABASE_PASSWORD >> .env
    echo $DATABASE_NAME >> .env
+   echo "end" >> .env
    echo "ENV FILE HAS CREATED"
 fi
 
