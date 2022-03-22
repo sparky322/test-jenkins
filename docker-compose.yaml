@@ -23,7 +23,7 @@ services:
         environment:
             TZ: "Europe/Minsk"
             MYSQL_ALLOW_EMPTY_PASSWORD: "no"
-            MYSQL_ROOT_PASSWORD: "rootpwd"
+            MYSQL_ROOT_PASSWORD: "$${ROOT_PASSWD}"
             MYSQL_USER: "$${DATABASE_USER}"
             MYSQL_PASSWORD: "$${DATABASE_PASSWORD}"
             MYSQL_DATABASE: "$${DATABASE_NAME}"
